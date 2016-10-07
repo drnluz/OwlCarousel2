@@ -842,10 +842,10 @@
 			$.each(coordinates, $.proxy(function(index, value) {
 				if (coordinate > value - pull && coordinate < value + pull) {
 					position = index;
-				} else (this.op(coordinate, '<', value)
-					&& this.op(coordinate, '>', coordinates[index + 1] || value - width)) {
-					position = direction === 'left' ? index + 1 : index;
 				}
+        else (this.op(coordinate, '<', value) && this.op(coordinate, '>', coordinates[index + 1] || value - width))
+					position = direction === 'left' ? index + 1 : index;
+
 				return position === -1;
 			}, this));
 		}
