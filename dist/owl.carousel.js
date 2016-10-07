@@ -850,7 +850,7 @@
 					position = index;
 				// on a right pull, check on previous index
 				// to do so, subtract width from value and set position = index + 1
-				} else if (direction === 'right' && coordinate > value - width - pull && coordinate < value - width + pull) {
+				} else if (direction === 'right' && coordinate > value - pull && coordinate < value + pull) {
 					position = index + 1;
 				} else if (this.op(coordinate, '<', value)
 					&& this.op(coordinate, '>', coordinates[index + 1] || value - width)) {
